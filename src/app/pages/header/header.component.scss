@@ -1,0 +1,45 @@
+@import "variables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: $sp-md;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $c-dark-gray;
+}
+
+.title-container {
+  h1 {
+    font-size: $fs-xl;
+    color: $c-white;
+  }
+}
+
+.user-container {
+  p {
+    font-size: $fs-md;
+    color: $c-white;
+  }
+  .login-state {
+    font-size: $fs-sm;
+    margin-bottom: $sp-sm;
+  }
+  .user-wrapper {
+    display: flex;
+    align-items: center;
+    gap: $sp-xs;
+    color: $c-white;
+  }
+  .circle {
+    background-color: #fff;
+    width: $sp-xl;
+    height: $sp-xl;
+    border-radius: 999px;
+  }
+}
