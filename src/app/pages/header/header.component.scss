@@ -11,12 +11,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $c-dark-gray;
+  background-color: $c-raisin-black;
 }
 
 .title-container {
   h1 {
-    font-size: $fs-xl;
+    font-size: $fs-lg;
     color: $c-white;
   }
 }
@@ -38,8 +38,8 @@
   }
   .circle {
     background-color: #fff;
-    width: $sp-xl;
-    height: $sp-xl;
+    width: $sp-lg;
+    height: $sp-lg;
     border-radius: 999px;
   }
 }
