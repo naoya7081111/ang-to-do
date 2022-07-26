@@ -1,0 +1,72 @@
+@import "variables";
+
+$sidebar-font-size: $fs-md;
+$date-icon-size: $sp-lg;
+$task-count-icon-size: $sp-md;
+
+.container {
+  width: 240px;
+  height: 100vh;
+  background-color: $c-independence;
+  padding-top: $sty-header-height;
+  position: fixed;
+  z-index: 500;
+}
+
+.date-task {
+  width: 160px;
+  height: $sp-xl;
+  padding-left: $sty-left-padding;
+  list-style: none;
+  padding: $sp-xs;
+  border-radius: $ra-sm;
+  display: flex;
+  align-items: center;
+
+  .date-state {
+    font-size: $sidebar-font-size;
+  }
+
+  .date-icon {
+    display: block;
+    position: relative;
+
+    .date-num {
+      font-size: $fs-sm;
+      width: $date-icon-size;
+      height: $date-icon-size;
+      box-sizing: border-box;
+      border: 1px solid $c-white;
+      border-radius: $ra-xs;
+      margin-left: $sp-sm;
+
+      p {
+        line-height: $date-icon-size;
+        text-align: center;
+      }
+    }
+
+    .date-task-count {
+      background-color: red;
+      display: block;
+      width: $task-count-icon-size;
+      height: $task-count-icon-size;
+      font-size: $fs-sm;
+      border-radius: $ra-full;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(40%, 40%);
+
+      p {
+        line-height: $task-count-icon-size;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.date-task:hover {
+  background-color: $c-raisin-black;
+  cursor: pointer;
+}
