@@ -1,0 +1,73 @@
+@import "variables";
+
+$icon-size: 36px;
+$icon-option-size: 24px;
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: $c-liberty;
+  box-sizing: border-box;
+  padding-top: $sty-header-height;
+  padding-left: $sty-sidebar-width;
+}
+
+.wrapper {
+  display: flex;
+  padding: $sp-md;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  padding: $sp-md;
+  border-radius: $ra-md;
+  background-color: $c-independence;
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-md;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    img {
+      width: $icon-size;
+      height: $icon-size;
+    }
+  }
+
+  .card-description {
+    min-height: 120px;
+    color: $c-white;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
+  .card-title {
+    h2 {
+      color: $c-white;
+    }
+  }
+
+  .card-option-icons {
+    display: flex;
+    justify-content: flex-end;
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    img {
+      width: $icon-option-size;
+      height: $icon-option-size;
+    }
+  }
+}

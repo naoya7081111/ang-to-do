@@ -5,7 +5,7 @@ $date-icon-size: $sp-lg;
 $task-count-icon-size: $sp-md;
 
 .container {
-  width: 240px;
+  width: $sty-sidebar-width;
   height: 100vh;
   background-color: $c-independence;
   padding-top: $sty-header-height;

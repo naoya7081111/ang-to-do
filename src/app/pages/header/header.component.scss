@@ -7,9 +7,9 @@
   height: $sty-header-height;
   width: 100%;
   padding-top: $sp-md;
-  padding-right: $sp-md;
   padding-bottom: $sp-md;
   padding-left: $sty-left-padding;
+  padding-right: $sty-left-padding;
   box-sizing: border-box;
   position: fixed;
   z-index: 1000;
