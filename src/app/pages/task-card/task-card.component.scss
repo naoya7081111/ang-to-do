@@ -19,7 +19,7 @@ $icon-option-size: 24px;
 
 .card {
   width: 300px;
-  height: 280px;
+  height: auto;
   padding: $sp-md;
   border-radius: $ra-md;
   background-color: $c-independence;
@@ -43,7 +43,12 @@ $icon-option-size: 24px;
   }
 
   .card-description {
+    min-height: 120px;
     color: $c-white;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
   }
 
   .card-title {
@@ -55,6 +60,10 @@ $icon-option-size: 24px;
   .card-option-icons {
     display: flex;
     justify-content: flex-end;
+
+    button:hover {
+      cursor: pointer;
+    }
 
     img {
       width: $icon-option-size;
