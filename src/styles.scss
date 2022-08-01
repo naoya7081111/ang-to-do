@@ -11,4 +11,10 @@ h2,
 h3,
 span {
   color: $c-white;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
