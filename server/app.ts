@@ -1,25 +1,43 @@
 import express = require('express');
-const mysql = require('mysql');
+import config from './config';
 
+const mysql = require('mysql2/promise');
 const app: express.Express = express();
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '9711Naoya',
-  database: 'complete_to_do',
-});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const dbSettings = config.db;
+
 const port = process.env.port || '3001';
+
 app.listen(port, function () {
   console.log('I am running!');
 });
 
-app.get('/api/v1/tasks', (req: express.Request, res: express.Response) => {
-  connection.query('SELECT * FROM task', (error: any, results: any) => {
-    const tasks = results;
-    res.json({ tasks: tasks });
-  });
-});
+app.get(
+  '/api/v1/tasks',
+  async (req: express.Request, res: express.Response) => {
+    let connection;
+    const sql: string = 'SELECT * FROM tasks';
+    const params: string[] = [];
+    try {
+      connection = await mysql.createConnection(dbSettings);
+      const rows = await connection.execute(sql, params);
+      await connection.commit();
+      res.json({
+        data: rows[0],
+      });
+    } catch (error) {
+      await connection.rollback();
+      console.log(error);
+      res.json({
+        status: 'error',
+        error: 'fail to fetch data',
+      });
+    } finally {
+      connection.end();
+      return;
+    }
+  }
+);
