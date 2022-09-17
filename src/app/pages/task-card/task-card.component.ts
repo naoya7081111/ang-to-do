@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Task } from 'src/app/mock/tasks';
 
-import { tasks, Task } from 'src/app/mock/tasks';
+import { TaskService } from 'src/app/shared/task.service';
 
 @Component({
   selector: 'ang-task-card',
@@ -8,9 +9,10 @@ import { tasks, Task } from 'src/app/mock/tasks';
   styleUrls: ['./task-card.component.scss'],
 })
 export class TaskCardComponent implements OnInit {
-  tasks = tasks;
+  @Input()
+  task!: Task;
 
-  constructor() {}
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {}
 }

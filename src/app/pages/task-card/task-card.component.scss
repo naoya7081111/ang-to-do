@@ -3,40 +3,15 @@
 $icon-size: 36px;
 $icon-option-size: 24px;
 
-.container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-  background-color: $c-liberty;
-  box-sizing: border-box;
-  padding-top: $sty-header-height;
-  padding-left: $sty-sidebar-width;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  justify-content: center;
-  padding-top: $sp-xl;
-  padding-right: $sp-md;
-  padding-left: $sp-md;
-  padding-bottom: $sp-md;
-  gap: $sp-xl;
-}
-
 .card {
   box-sizing: border-box;
   height: auto;
   padding: $sp-md;
   border-radius: $ra-md;
   background-color: $c-independence;
-
-  .card-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: $sp-md;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: $sp-md;
 
   .card-header {
     display: flex;

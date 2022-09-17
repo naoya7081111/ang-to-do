@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TaskCardComponent } from './pages/task-card/task-card.component';
+import { TaskListComponent } from './pages/task-list/task-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'task-cards', pathMatch: 'full' },
-  { path: 'task-cards', component: TaskCardComponent },
+  { path: '', redirectTo: 'task-list', pathMatch: 'full' },
+  { path: 'task-list', component: TaskListComponent },
 ];
 
 @NgModule({
